@@ -18,7 +18,7 @@ func checkErr(err error) {
 }
 
 /* ----------------------------------- TOC ---------------------------------- */
-// Packages (Library)
+// Packages (Library) --> ./app
 
 // ./ $ go mod init <currentRefName>
 // 

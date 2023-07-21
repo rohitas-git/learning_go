@@ -25,10 +25,12 @@ type km float64
 type millimeter float64
 type centimeter float64
 
+// Normal Function 
 func mToKm(dist meter) km{
 	return km(dist/1000)
 }
 
+// Associated Methods  (better in case of defined type)
 func (m meter) toKm() km{
 	return km(m/1000)
 }
@@ -39,10 +41,10 @@ func (m meter) toMilli() millimeter{
 
 func main() {
 	var distance meter = 2999
-	pl(mToKm(distance))
-
+	
 	pl(meter(10) > meter(9.999)) 
 	
-	pl(distance.toKm())
+	pl(mToKm(distance))	// Nice 
+	pl(distance.toKm())	// Much clearer
 	pl(distance.toMilli())
 }
